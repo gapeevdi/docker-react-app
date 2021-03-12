@@ -6,4 +6,4 @@ before_install:
   - docker build -t gapeevdi/front-react -f Dockerfile.dev .
 
 script:
-  - docker run gapeevdi/front-react npm run test -- --coverage
+  - docker run -e CI=true  gapeevdi/front-react npm run test
